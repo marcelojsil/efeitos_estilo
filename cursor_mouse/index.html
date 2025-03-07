@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<style>
+    #cursor-effect {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(0, 150, 255, 0.7);
+  position: absolute;
+  pointer-events: none;
+  transition: transform 0.3s;
+}
+</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Efeito de Cursor</title>
+  
+</head>
+<body>
+  <div id="cursor-effect"></div>
+ 
+
+  <script>
+    // script.js
+document.addEventListener('mousemove', (event) => {
+  const cursorEffect = document.getElementById('cursor-effect');
+  cursorEffect.style.transform = `translate(${event.clientX}px, ${event.clientY}px)`;
+});
+
+  </script>
+</body>
+</html>
